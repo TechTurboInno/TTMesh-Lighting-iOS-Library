@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LightCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mC2-YZ-2K0">
+                        <rect key="frame" x="19" y="9" width="62" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="62" id="SiQ-0n-4UE"/>
+                            <constraint firstAttribute="width" constant="62" id="e2Y-aK-oNw"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulb_off.png" translatesAutoresizingMaskIntoConstraints="NO" id="TSp-8k-4kv">
+                        <rect key="frame" x="20.5" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="3Ka-kG-MDD"/>
+                            <constraint firstAttribute="height" constant="60" id="Kzb-yY-vdD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evi-ET-Ski">
+                        <rect key="frame" x="0.0" y="78" width="100" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulb_offline_flag.png" translatesAutoresizingMaskIntoConstraints="NO" id="PNS-7n-6Mr">
+                        <rect key="frame" x="15" y="34" width="70" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="V8P-CZ-LB2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TSp-8k-4kv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="5dC-3a-4tg"/>
+                <constraint firstAttribute="trailing" secondItem="evi-ET-Ski" secondAttribute="trailing" id="6VI-58-HJ5"/>
+                <constraint firstItem="PNS-7n-6Mr" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7oc-fz-ykL"/>
+                <constraint firstItem="mC2-YZ-2K0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="JZw-Vy-SXP"/>
+                <constraint firstItem="mC2-YZ-2K0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ktv-oG-KLB"/>
+                <constraint firstItem="PNS-7n-6Mr" firstAttribute="centerY" secondItem="TSp-8k-4kv" secondAttribute="centerY" id="LhJ-6I-V1m"/>
+                <constraint firstItem="evi-ET-Ski" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yhp-d0-4DF"/>
+                <constraint firstItem="TSp-8k-4kv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="beL-if-59C"/>
+                <constraint firstItem="evi-ET-Ski" firstAttribute="top" secondItem="TSp-8k-4kv" secondAttribute="bottom" constant="8" id="hjJ-b7-Q7Q"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="bkImageView" destination="mC2-YZ-2K0" id="kpI-hT-kH0"/>
+                <outlet property="flagImageView" destination="PNS-7n-6Mr" id="zpB-fG-dpm"/>
+                <outlet property="nameLabel" destination="evi-ET-Ski" id="z6f-5H-sCT"/>
+                <outlet property="stateImageView" destination="TSp-8k-4kv" id="1IR-mL-uoa"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bulb_off.png" width="60" height="60"/>
+        <image name="bulb_offline_flag.png" width="70" height="13"/>
+    </resources>
+</document>

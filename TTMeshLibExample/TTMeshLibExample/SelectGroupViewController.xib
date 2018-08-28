@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectGroupViewController">
+            <connections>
+                <outlet property="collectionView" destination="4z6-NL-RMe" id="Jhs-tC-M4W"/>
+                <outlet property="titleLAbel" destination="rv8-Vl-vyv" id="qTw-Tp-oaL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rv8-Vl-vyv">
+                    <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5h8-tu-uxv"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="7Zd-1l-xCH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ty-yK-LSP">
+                    <rect key="frame" x="315" y="40" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="1uD-X8-qSe"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="7kU-WV-JzK"/>
+                        <constraint firstAttribute="width" constant="44" id="T9G-eC-OM3"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="44" id="WMo-mS-b4Y"/>
+                        <constraint firstAttribute="height" constant="44" id="aBK-ns-JXj"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="hXI-jx-XGI"/>
+                    </constraints>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="bvP-gH-40z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-jt-wsh">
+                    <rect key="frame" x="0.0" y="40" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="0xA-2t-T0F"/>
+                        <constraint firstAttribute="height" constant="44" id="3Xq-Ye-g5n"/>
+                        <constraint firstAttribute="width" constant="44" id="9Dn-gK-PL1"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="h1U-fU-9nM"/>
+                    </constraints>
+                    <state key="normal" image="back.png"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="l19-Ff-VuD"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4z6-NL-RMe">
+                    <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a9f-0d-fT8">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Ty-yK-LSP" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="0uO-4M-iV4"/>
+                <constraint firstAttribute="trailing" secondItem="rv8-Vl-vyv" secondAttribute="trailing" id="2Y9-Ll-wRD"/>
+                <constraint firstItem="4z6-NL-RMe" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="3Kg-hJ-cRa"/>
+                <constraint firstItem="4z6-NL-RMe" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="58A-1c-Cyp"/>
+                <constraint firstItem="f4V-jt-wsh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="7Uu-8q-a8B"/>
+                <constraint firstItem="4z6-NL-RMe" firstAttribute="top" secondItem="rv8-Vl-vyv" secondAttribute="bottom" id="Gpq-c6-6si"/>
+                <constraint firstItem="f4V-jt-wsh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="T6l-Nj-MTO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="4z6-NL-RMe" secondAttribute="bottom" id="hpf-sp-s0l"/>
+                <constraint firstItem="rv8-Vl-vyv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="uXh-0B-vyW"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="4Ty-yK-LSP" secondAttribute="trailing" constant="16" id="wHc-fc-18K"/>
+                <constraint firstItem="rv8-Vl-vyv" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="xdT-G9-zjr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="11" height="20"/>
+    </resources>
+</document>
